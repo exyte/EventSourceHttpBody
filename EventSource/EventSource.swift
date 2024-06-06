@@ -229,9 +229,7 @@ private extension EventSource {
                 continue
             }
 
-            if event.event == nil || event.event == "thread.message.delta" {
-                mainQueue.async { [weak self] in self?.onMessageCallback?(event.id, "thread.message.delta", event.data) }
-            }
+            mainQueue.async { [weak self] in self?.onMessageCallback?(event.id, event.event, event.data) }
 
             if let eventName = event.event, let eventHandler = eventListeners[eventName] {
                 mainQueue.async { eventHandler(event.id, event.event, event.data) }
