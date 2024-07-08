@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'EventSourceHttpBody'
-  s.version          = '0.1.4'
+  s.version          = '0.1.5'
   s.summary          = 'Forked from https://github.com/inaka/EventSource with the added ability to include HttpBody'
 
   s.homepage     = "https://github.com/exyte/EventSourceHttpBody"
@@ -11,8 +11,8 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '12.0'
   s.osx.deployment_target = '11.0'
-  s.tvos.deployment_target = '16.0'
-  s.watchos.deployment_target = '8.0'
+  s.tvos.deployment_target = '13.0'
+  s.watchos.deployment_target = '6.0'
 
   s.source_files = 'EventSource/*.swift'
   s.swift_version = "5.2"
